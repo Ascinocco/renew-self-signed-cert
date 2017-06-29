@@ -9,7 +9,7 @@ let exec = require('child_process').exec;
 console.log('Defining commands...');
 let command = 'sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/apache-selfsigned.key -out /etc/ssl/certs/apache-selfsigned.crt';
 
-let j = schedule.scheduledJob({minute: 5}, function() {
+let j = schedule.scheduleJob({minute: 5}, function() {
     console.log('Job is running...');
     exec(command);
     console.log('Self signed cert regenerated...');

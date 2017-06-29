@@ -4,6 +4,7 @@
         "example": "nodemon example-ssl-renew.js"
     },
     "dependencies": {
-        "node-schedule": "^1.2.3"
+        "node-schedule": "^1.2.3",
+        "shelljs": "^0.7.8"
     }
 }

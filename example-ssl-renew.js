@@ -1,5 +1,5 @@
 let schedule = require('node-schedule');
-let exec = require('child_process').exec;
+let shell = require('shelljs');
 
 console.log('Creating rules...');
 
@@ -12,7 +12,7 @@ let command = 'sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout 
 console.log('Setting jobs...');
 let renewSSLJob = schedule.scheduleJob(rule, function () {
     console.log('Renewing SSL cert...');
-    console.log(command);
-    exec('pwd');
+    shell.exec(command);
+    shell.echo('Shell is echoing!');
     console.log('SSL cert renewed...');
 });

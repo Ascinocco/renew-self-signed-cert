@@ -1,7 +1,6 @@
 {
     "scripts": {
-        "start": "nodemon node-ssl-schedule.js",
-        "example": "nodemon example-ssl-renew.js"
+        "start": "nodemon node-cert-renewal.js"
     },
     "dependencies": {
         "node-schedule": "^1.2.3",

@@ -16,3 +16,13 @@ let renewSSLJob = schedule.scheduleJob(rule, function () {
     shell.echo('Shell is echoing!');
     console.log('SSL cert renewed...');
 });
+
+// lets figure out why the script ends
+
+let testRule = new schedule.RecurrenceRule();
+testRule.minute = 40;
+
+let testJob = schedule.scheduleJob(testRule, function () { 
+    console.log('Console log');
+    shell.exec('Shell Exec');
+});
